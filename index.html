@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harawata Mochi Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Harawata Mochi Information</h1>
+        <div class="tab">
+            <button class="tablinks" onclick="openLanguage(event, 'English')" id="defaultOpen">English</button>
+            <button class="tablinks" onclick="openLanguage(event, 'Vietnamese')">Tiếng Việt</button>
+            <button class="tablinks" onclick="openLanguage(event, 'Filipino')">Filipino</button>
+            <button class="tablinks" onclick="openLanguage(event, 'Thai')">ภาษาไทย</button>
+            <button class="tablinks" onclick="openLanguage(event, 'Chinese')">中文</button>
+            <button class="tablinks" onclick="openLanguage(event, 'Korean')">한국어</button>
+            <button class="tablinks" onclick="openLanguage(event, 'French')">Français</button>
+        </div>
+
+        <div id="English" class="tabcontent">
+            <p>Takakura Shrine offers a special Japanese sweet called "Harawata Mochi," sold only on specific days known as "Doyo no Ushi" in the traditional Japanese calendar. This shrine is uniquely believed throughout Japan to have the power to alleviate stomach and intestinal discomfort. It's said that eating this mochi will keep your digestive system healthy for a year. One pack containing 6 pieces costs 450 yen (about 3-4 USD). We recommend trying it when you visit Japan. For hygiene reasons, please consume it on the day of purchase.</p>
+        </div>
+
+        <div id="Vietnamese" class="tabcontent">
+            <p>Đền Takakura cung cấp một loại bánh ngọt Nhật Bản đặc biệt gọi là "Harawata Mochi", chỉ bán vào những ngày cụ thể được gọi là "Doyo no Ushi" trong lịch truyền thống Nhật Bản. Đền này được tin là duy nhất ở Nhật Bản có sức mạnh làm dịu cơn đau dạ dày và ruột. Người ta nói rằng ăn bánh mochi này sẽ giúp hệ tiêu hóa của bạn khỏe mạnh trong một năm. Một gói chứa 6 miếng có giá 450 yên (khoảng 3-4 USD). Chúng tôi khuyên bạn nên thử khi đến thăm Nhật Bản. Vì lý do vệ sinh, vui lòng tiêu thụ trong ngày mua.</p>
+        </div>
+
+        <div id="Filipino" class="tabcontent">
+            <p>Ang Takakura Shrine ay nag-aalok ng espesyal na Japanese na matamis na tinatawag na "Harawata Mochi", na ibinebenta lamang sa mga partikular na araw na kilala bilang "Doyo no Ushi" sa tradisyunal na kalendaryo ng Hapon. Ang dambana na ito ay natatanging pinaniniwalaan sa buong Japan na may kapangyarihang magpaginhawa ng sakit sa tiyan at bituka. Sinasabi na ang pagkain ng mochi na ito ay magpapanatili ng malusog na sistema ng pagtunaw ng pagkain sa loob ng isang taon. Ang isang pakete na naglalaman ng 6 na piraso ay nagkakahalaga ng 450 yen (humigit-kumulang 3-4 USD). Inirerekomenda namin na subukan ito kapag bumisita ka sa Japan. Para sa kadahilanang pangkalinisan, mangyaring kainin ito sa araw ng pagbili.</p>
+        </div>
+
+        <div id="Thai" class="tabcontent">
+            <p>ศาลเจ้าทาคาคุระเสนอขนมญี่ปุ่นพิเศษที่เรียกว่า "ฮาราวาตะ โมจิ" ซึ่งขายเฉพาะในวันที่เรียกว่า "โดโยโนอุชิ" ตามปฏิทินญี่ปุ่นโบราณเท่านั้น ศาลเจ้านี้เป็นที่เชื่อกันทั่วญี่ปุ่นว่ามีพลังในการบรรเทาอาการปวดท้องและลำไส้ มีคำกล่าวว่าการรับประทานโมจินี้จะช่วยให้ระบบย่อยอาหารของคุณแข็งแรงเป็นเวลาหนึ่งปี หนึ่งห่อบรรจุ 6 ชิ้น ราคา 450 เยน (ประมาณ 3-4 ดอลลาร์สหรัฐ) เราแนะนำให้ลองเมื่อคุณมาเยือนญี่ปุ่น เพื่อเหตุผลด้านสุขอนามัย กรุณารับประทานในวันที่ซื้อ</p>
+        </div>
+
+        <div id="Chinese" class="tabcontent">
+            <p>高仓神社提供一种名为"肠内麻糬"的特殊日本甜点，仅在日本传统历法中称为"土用丑日"的特定日子销售。在整个日本，唯有这座神社被认为具有缓解胃肠不适的力量。据说食用这种麻糬可以让你的消化系统保持健康一年。一包6个售价450日元（约3-4美元）。我们建议您访问日本时品尝。出于卫生考虑，请在购买当天食用。</p>
+        </div>
+
+        <div id="Korean" class="tabcontent">
+            <p>다카쿠라 신사는 일본 전통 달력의 "도요노 우시"라고 불리는 특정일에만 판매되는 "하라와타 모치"라는 특별한 일본 과자를 제공합니다. 이 신사는 일본 전역에서 유일하게 위장과 장의 통증을 완화시키는 힘이 있다고 믿어집니다. 이 모치를 먹으면 1년 동안 소화기 건강이 유지된다고 합니다. 6개 들이 한 팩의 가격은 450엔(약 3-4 달러)입니다. 일본을 방문하실 때 꼭 드셔보시기를 추천합니다. 위생상의 이유로 구매한 당일에 드시기 바랍니다.</p>
+        </div>
+
+        <div id="French" class="tabcontent">
+            <p>Le sanctuaire Takakura propose une confiserie japonaise spéciale appelée "Harawata Mochi", vendue uniquement les jours spécifiques connus sous le nom de "Doyo no Ushi" dans le calendrier traditionnel japonais. Ce sanctuaire est unique au Japon car on croit qu'il a le pouvoir de soulager les maux d'estomac et d'intestins. On dit que manger ce mochi maintiendra votre système digestif en bonne santé pendant un an. Un paquet contenant 6 pièces coûte 450 yens (environ 3-4 USD). Nous vous recommandons de l'essayer lors de votre visite au Japon. Pour des raisons d'hygiène, veuillez le consommer le jour de l'achat.</p>
+        </div>
+    </div>
+
+    <script>
+        function openLanguage(evt, languageName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(languageName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
